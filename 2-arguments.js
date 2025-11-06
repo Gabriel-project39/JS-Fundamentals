@@ -1,10 +1,11 @@
-const argsCount = process.argv.length - 2;
+// 2-arguments.js
 
-if (argsCount === 0) {
-  console.log("0 argument");
-} else if (argsCount === 1) {
-  console.log("1 argument");
+const args = process.argv.slice(2); // Get all user-provided arguments
+
+if (args[0] === undefined) {
+    console.log("No argument");
+} else if (args[1] === undefined) {
+    console.log("Argument found");
 } else {
-  console.log(`${argsCount} arguments`);
+    console.log("Arguments found");
 }
-
